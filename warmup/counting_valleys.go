@@ -1,7 +1,11 @@
 package warmup
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
 )
 
 /*
@@ -37,15 +41,15 @@ func countingValleys(steps int32, path string) int32 {
 }
 
 func CountingValleys() {
-	//reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
+	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	//stepsTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
-	//checkError(err)
-	//steps := int32(stepsTemp)
-	//
-	//path := readLine(reader)
+	stepsTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	checkError(err)
+	steps := int32(stepsTemp)
 
-	result := countingValleys(8, "UDDDUDUU")
+	path := readLine(reader)
+
+	result := countingValleys(steps, path)
 
 	fmt.Println(result)
 }

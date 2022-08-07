@@ -16,7 +16,6 @@ import (
  *  1. STRING s
  *  2. LONG_INTEGER n
  */
-
 func repeatedString(s string, n int64) int64 {
 	var count int64 = 0
 
